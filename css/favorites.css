@@ -13,9 +13,11 @@
 /* Hero */
 .hero {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 60px 40px;
+  align-items: center;
+  gap: 48px;
+  padding: 50px 0 40px;
+  flex-wrap: wrap;
   background: linear-gradient(135deg, rgba(15, 15, 15, 0.9), rgba(20, 20, 20, 0.9));
   backdrop-filter: blur(15px);
   border-bottom: 1px solid rgba(198, 167, 105, 0.2);
@@ -26,65 +28,58 @@
 .hero::before {
   content: '';
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   background: radial-gradient(circle at 30% 20%, rgba(198, 167, 105, 0.1), transparent 50%);
   pointer-events: none;
 }
 
 .hero-text {
-  flex: 1;
-  z-index: 1;
+  max-width: 540px;
 }
 
 .hero-text h1 {
   font-family: 'Cinzel', serif;
-  font-size: 48px;
+  font-size: clamp(3rem, 5vw, 5rem);
   color: var(--gold);
-  margin: 0;
-  letter-spacing: 2px;
-  text-shadow: 0 0 20px rgba(198, 167, 105, 0.5);
+  line-height: 1.02;
+  letter-spacing: 0.04em;
+  text-shadow: 0 0 30px rgba(198, 167, 105, 0.15);
 }
 
 .hero-text p {
-  font-size: 18px;
-  color: var(--muted);
-  margin: 10px 0 0;
-  max-width: 500px;
-}
-
-.hero-visual {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1;
+  color: #d0c6a5;
+  margin: 18px 0 26px;
+  max-width: 520px;
+  font-size: 1.05rem;
+  line-height: 1.8;
 }
 
 /* GRID SECTION */
-.grid-section {
-  padding: 40px;
-  text-align: center;
+.grid-section h2 {
+  margin-bottom: 26px;
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: clamp(2rem, 3vw, 2.5rem);
+  position: relative;
 }
 
-.grid-section h2 {
-  font-family: 'Cinzel', serif;
-  font-size: 32px;
-  color: var(--gold);
-  margin-bottom: 30px;
-  letter-spacing: 1px;
+.grid-section h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -12px;
+  width: 70px;
+  height: 4px;
+  border-radius: 999px;
+  background: var(--gold);
+  opacity: 0.95;
 }
 
 /* GRID */
 .fav-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 25px;
-  padding: 40px;
-  max-width: 1200px;
-  margin: 0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 24px;
 }
 
 /* CARD */
