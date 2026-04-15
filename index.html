@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Midnight Velvet Distillery </title>
+
+    <link rel="stylesheet" href="css/style.css" />
+
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="brand">
+            🍸 Nocturne Bar
+        </div>
+        <nav class="nav-links">
+            <a href="#" class="active" data-view="home">Inicio</a>
+            <a href="favorito.html">Favoritos</a>
+        </nav>
+        <div class="nav-actions">
+            <input type="text" id="searchInput" placeholder="Buscar cóctel..." />
+        </div>
+
+    </header>
+
+    <main class="container">
+
+        <!-- HERO -->
+        <section class="hero">
+            <div class="hero-text">
+                <h1 id="heroName">Midnight Velvet Distillery </h1>
+                <p id="heroDesc">Explora cócteles elegantes y oscuros</p>
+                <button id="randomBtn">Cóctel aleatorio</button>
+            </div>
+            <div class="hero-visual">
+
+                <svg width="220" height="220" viewBox="0 0 200 200" fill="none">
+
+                    <defs>
+                        <radialGradient id="glowWhisky" cx="50%" cy="35%" r="70%">
+                            <stop offset="0%" stop-color="#c6a769" stop-opacity="0.35" />
+                            <stop offset="100%" stop-color="#0f0f0f" stop-opacity="0" />
+                        </radialGradient>
+                    </defs>
+
+                    <circle cx="100" cy="100" r="90" fill="url(#glowWhisky)" />
+
+                    <rect x="55" y="70" width="90" height="70" rx="8" stroke="#c6a769" stroke-width="2" fill="none" />
+
+                    <path d="M60 105 L140 105 L135 135 L65 135 Z" fill="#a65a1f" opacity="0.85" />
+
+                    <rect x="90" y="90" width="22" height="22" transform="rotate(18 100 100)" stroke="#e8e8e8"
+                        stroke-width="1.5" fill="rgba(255,255,255,0.1)" />
+                    <circle cx="135" cy="70" r="10" stroke="#c6a769" stroke-width="2" fill="none" />
+
+                    <line x1="135" y1="70" x2="142" y2="64" stroke="#c6a769" stroke-width="2" />
+
+                </svg>
+            </div>
+        </section>
+
+        <section class="filters">
+            <button class="filter-btn active" data-ingredient="all">Todos</button>
+            <button class="filter-btn" data-ingredient="Vodka">Vodka</button>
+            <button class="filter-btn" data-ingredient="Rum">Ron</button>
+            <button class="filter-btn" data-ingredient="Gin">Gin</button>
+            <button class="filter-btn" data-ingredient="Tequila">Tequila</button>
+            <button class="filter-btn" data-ingredient="Whiskey">Whiskey</button>
+        </section>
+
+        <section class="grid-section">
+            <h2>Explorar cócteles</h2>
+
+            <div class="grid" id="cocktailGrid"></div>
+        </section>
+
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal-content horizontal">
+
+            <span class="close" id="closeModal">✖</span>
+
+            <div class="modal-left">
+                <img id="modalImg" />
+            </div>
+
+            <div class="modal-right">
+
+                <h2 id="modalTitle"></h2>
+
+                <div class="section">
+                    <h3>🥃 Ingredientes</h3>
+                    <ul id="modalIngredients"></ul>
+                </div>
+
+                <div class="section">
+                    <h3>📜 Instrucciones</h3>
+                    <p id="modalInstructions"></p>
+                </div>
+
+                <button id="favBtn">❤️ Favorito</button>
+
+            </div>
+
+            <div class="modal-nav">
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/dom.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/favorites-manager.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/render.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/home.js"></script>
+    <script src="js/app.js"></script>
+
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-brand">
+                <h2>Nocturne Bar</h2>
+                <p>Explorador de cócteles digitales con estética nocturna y vintage.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Enlaces</h3>
+                <a href="#">Inicio</a>
+                <a href="#">Buscar</a>
+                <a href="#">Favoritos</a>
+            </div>
+
+            <div class="footer-legal">
+                <h3>Legal</h3>
+                <a href="text/legal.html#terminos">Términos de uso</a>
+                <a href="text/legal.html#privacidad">Privacidad</a>
+                <a href="text/legal.html#licencias">Licencias</a>
+                <a href="text/legal.html#creditos">Créditos API</a>
+            </div>
+
+            <div class="footer-social">
+                <h3>Redes</h3>
+
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+                        <iconify-icon icon="akar-icons:instagram-fill"></iconify-icon>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noreferrer noopener" aria-label="Twitter">
+                        <iconify-icon icon="akar-icons:twitter-fill"></iconify-icon>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+                        <iconify-icon icon="akar-icons:github-fill"></iconify-icon>
+                    </a>
+                    <a href="https://reddit.com" target="_blank" rel="noreferrer noopener" aria-label="Reddit">
+                        <iconify-icon icon="akar-icons:reddit-fill"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 Midnight Velvet Distillery — Todos los derechos reservados</p>
+        </div>
+
+    </footer>
+
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+
+</body>
+
+</html>

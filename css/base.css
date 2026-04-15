@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Inter:wght@300;400;600&display=swap');
+
+:root {
+  --bg: #070707;
+  --panel: #131313;
+  --panel2: #232323;
+  --gold: #c6a769;
+  --wine: #6e2c2c;
+  --text: #e6e6e6;
+  --muted: #a1a1a1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, transform 0.25s ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top left, rgba(198, 167, 105, 0.14), transparent 22%),
+    radial-gradient(circle at 80% 10%, rgba(255, 255, 255, 0.08), transparent 15%),
+    linear-gradient(180deg, #090909 0%, #0f0f0f 40%, #080808 100%);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+}
+
+body::selection {
+  background: rgba(198, 167, 105, 0.28);
+  color: #fff;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.hero-visual svg {
+  animation: floatDrink 5s ease-in-out infinite;
+}
+
+@keyframes floatDrink {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}

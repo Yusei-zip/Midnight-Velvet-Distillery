@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Favoritos - Nocturne Bar</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/favorites.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="brand">
+            🍸 Nocturne Bar
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="favorito.html" class="active">Favoritos</a>
+        </nav>
+        <div class="nav-actions">
+            <input type="text" id="searchInput" placeholder="Buscar cóctel..." />
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div class="hero-text">
+                <h1>❤️ Tus Favoritos</h1>
+                <p>Tu colección personal de cócteles seleccionados</p>
+            </div>
+
+        </section>
+
+        <section class="grid-section">
+            <h2>Tu colección de favoritos</h2>
+            <div class="fav-grid" id="favGrid">
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <h2>Nocturne Bar</h2>
+                <p>Explorador de cócteles digitales con estética nocturna y vintage.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Enlaces</h3>
+                <a href="index.html">Inicio</a>
+                <a href="#">Buscar</a>
+                <a href="favorito.html">Favoritos</a>
+            </div>
+            <div class="footer-legal">
+                <h3>Legal</h3>
+                <a href="text/legal.html#terminos">Términos de uso</a>
+                <a href="text/legal.html#privacidad">Privacidad</a>
+                <a href="text/legal.html#licencias">Licencias</a>
+                <a href="text/legal.html#creditos">Créditos API</a>
+            </div>
+            <div class="footer-social">
+                <h3>Redes</h3>
+                <div class="social-icons">
+                    <a href="https://instagram.com" target="_blank" rel="noreferrer noopener" aria-label="Instagram">
+                        <iconify-icon icon="akar-icons:instagram-fill"></iconify-icon>
+                    </a>
+                    <a href="https://twitter.com" target="_blank" rel="noreferrer noopener" aria-label="Twitter">
+                        <iconify-icon icon="akar-icons:twitter-fill"></iconify-icon>
+                    </a>
+                    <a href="https://github.com" target="_blank" rel="noreferrer noopener" aria-label="GitHub">
+                        <iconify-icon icon="akar-icons:github-fill"></iconify-icon>
+                    </a>
+                    <a href="https://reddit.com" target="_blank" rel="noreferrer noopener" aria-label="Reddit">
+                        <iconify-icon icon="akar-icons:reddit-fill"></iconify-icon>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Midnight Velvet Distillery — Todos los derechos reservados</p>
+        </div>
+    </footer>
+
+    <script src="js/dom.js"></script>
+    <script src="js/state.js"></script>
+    <script src="js/favorites-manager.js"></script>
+    <script src="js/favorite.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</body>
+
+</html>

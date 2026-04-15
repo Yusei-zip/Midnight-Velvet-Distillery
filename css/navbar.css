@@ -1,0 +1,68 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 32px;
+  background: rgba(18, 18, 18, 0.92);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(198, 167, 105, 0.12);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.24);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.brand {
+  font-family: 'Cinzel', serif;
+  color: var(--gold);
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-shadow: 0 0 14px rgba(198, 167, 105, 0.18);
+}
+
+.nav-links {
+  display: flex;
+  gap: 26px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--muted);
+  position: relative;
+  font-size: 0.98rem;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: width 0.25s ease;
+}
+
+.nav-links a:hover::after,
+.nav-links .active::after {
+  width: 100%;
+}
+
+.nav-links a:hover,
+.nav-links .active {
+  color: var(--gold);
+}
+
+.nav-actions input {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(198, 167, 105, 0.12);
+  padding: 10px 14px;
+  border-radius: 999px;
+  color: #fff;
+  min-width: 220px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.nav-actions input::placeholder {
+  color: #8e8e8e;
+}

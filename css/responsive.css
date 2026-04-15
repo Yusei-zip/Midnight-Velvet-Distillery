@@ -1,0 +1,167 @@
+/* Responsive adjustments for mobile and tablet */
+
+@media (max-width: 980px) {
+  .navbar {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 18px 18px 14px;
+  }
+
+  .brand {
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .nav-actions {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-actions input {
+    width: min(100%, 520px);
+    min-width: 0;
+  }
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 24px 18px 20px;
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 32px 0 24px;
+    gap: 28px;
+  }
+
+  .hero-text {
+    width: 100%;
+    max-width: 760px;
+  }
+
+  .hero-visual {
+    width: 100%;
+    max-width: 520px;
+    min-height: 320px;
+  }
+
+  .hero-text p {
+    margin: 18px auto 26px;
+  }
+
+  .filters {
+    padding: 18px 16px;
+    gap: 10px;
+  }
+
+  .filter-btn {
+    padding: 10px 16px;
+    font-size: 0.92rem;
+  }
+
+  .grid {
+    gap: 18px;
+  }
+
+  .footer {
+    padding: 34px 16px 22px;
+  }
+
+  .footer-container {
+    gap: 28px;
+  }
+}
+
+@media (max-width: 520px) {
+  .container {
+    padding: 18px 14px 18px;
+  }
+
+  .navbar {
+    padding: 16px 14px 12px;
+  }
+
+  .nav-links {
+    gap: 12px;
+  }
+
+  .nav-actions input {
+    max-width: 100%;
+  }
+
+  .hero {
+    padding: 24px 0 20px;
+  }
+
+  .hero-visual {
+    min-height: 240px;
+  }
+
+  .filters {
+    padding: 16px 12px;
+  }
+
+  .filter-btn {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+  }
+
+  .modal-content.horizontal {
+    flex-direction: column;
+    width: min(100%, 92%);
+    max-width: 580px;
+    min-height: auto;
+    padding: 0;
+  }
+
+  .modal-left {
+    min-height: 260px;
+  }
+
+  .modal-right {
+    padding: 20px 22px 24px;
+  }
+
+  .modal-right h2 {
+    font-size: 28px;
+  }
+
+  .modal-nav {
+    position: static;
+    margin: 16px 0 0;
+    justify-content: center;
+    width: 100%;
+    padding: 0 18px 18px;
+  }
+
+  .close {
+    top: 12px;
+    right: 12px;
+  }
+
+  .modal-right {
+    padding: 18px 18px 20px;
+  }
+
+  .modal-right h2 {
+    font-size: 24px;
+  }
+
+  .footer {
+    padding: 30px 14px 18px;
+  }
+
+  .footer-container {
+    gap: 20px;
+  }
+}
